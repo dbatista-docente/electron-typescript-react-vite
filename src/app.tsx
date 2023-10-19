@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'
+import FormSendMessage from './components/FormSendMessage'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <h1>💖 Hello World!</h1>
-  </React.StrictMode>,
+    <FormSendMessage/>
+  </React.StrictMode>
 )
