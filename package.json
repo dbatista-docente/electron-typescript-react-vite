@@ -5,7 +5,7 @@
   "description": "My Electron application description",
   "main": ".vite/build/main.js",
   "scripts": {
-    "start": "electron-forge start",
+    "start": "concurrently \"electron-forge start\" \"cd server && nest start --watch \"",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
@@ -41,6 +41,7 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "axios": "^1.5.1",
+    "concurrently": "^8.2.2",
     "date-fns": "^2.30.0",
     "electron-squirrel-startup": "^1.0.0",
     "framer-motion": "^10.16.4",
