@@ -1,10 +1,10 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
-import * as express from 'express';
+import express from 'express';
 import * as bodyParser from 'body-parser';
 
-async function bootstrap() {
+export async function bootstrapNestJs() {
   const port = process.env.PORT ?? 3001
   const app = await NestFactory.create(AppModule, {
     bodyParser: true, cors: true
@@ -31,4 +31,4 @@ async function bootstrap() {
 
   await app.listen(port);
 }
-bootstrap();
+
